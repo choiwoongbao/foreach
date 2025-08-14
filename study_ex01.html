@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="nameList">
+      
+    </ul>
+    <script>
+        const nameList = document.querySelector("#nameList");
+      const names = ["최웅", "김혜주", "오땡땡", "박땡땡"];
+      names.forEach(function (name, index) {
+        // console.log(name);
+nameList.innerHTML += `<li>${name}</li>`
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="scoreList">
+
+    </ul>
+    <script>
+        const scoreList = document.querySelector("#scoreList");
+        const score = [90, 80 , 70, 60];
+        score.forEach(function(scoreitem, index){
+            // console.log(score);
+            scoreList.innerHTML +=`<li>해당 과목의 점수는${score}입니다.</li>`
+        })
+    </script>
+</body>
+</html>
