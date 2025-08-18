@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>forEach로 공지사항 예제</title>
+  </head>
+  <body>
+    <div class="notice">
+      <h2>공지사항</h2>
+      <div id="noticeList">
+        <!-- js출력 -->
+      </div>
+    </div>
+    <script>
+      const notices = [
+        { title: "여름 세일 안내", date: "2025-08-01" },
+        { title: "신규 회원 혜택 이벤트", date: "2025-08-10" },
+        { title: "배송 지연 안내", date: "2025-08-15" },
+        { title: "시스템 점검 공지", date: "2025-08-20" },
+      ];
+      const noticeList = document.querySelector("#noticeList");
+      //   function 뒤에는 notice 라는 매개변수를 지정
+      // (변수와는 다르게 지정해준다.)
+      notices.forEach(function (notice, index) {
+        // console.log(notice.title);
+        // console.log(notice.date);
+
+        // 0번이 아닌 1번부터 과일을 소개하고 싶을 떄  index에 +1을 써준다.
+        noticeList.innerHTML += `
+      ${index + 1}. ${notice.title} (${notice.date}) <br>
+    `;
+      });
+    </script>
+  </body>
+</html>

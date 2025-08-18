@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>forEach study</title>
+  </head>
+  <body>
+    <script>
+      // 사람 정보를 객체로 배열에 담기
+      const peoples = [
+        {
+          // key : name  값 : 민수
+          name: "민수",
+          age: 20,
+          city: "서울",
+        },
+        {
+          name: "영희",
+          age: 22,
+          city: "부산",
+        },
+        {
+          name: "철수",
+          age: 21,
+          city: "대구",
+        },
+      ];
+      //   forEach()로 배열에 있는 사람 정보를 꺼내서 출력
+      peoples.forEach(function (item, index) {
+        console.log(item);
+        document.write(`
+        이름 : ${item.name} , 나이 :${item.age} , 도시 : ${item.city} <br>
+        `)
+      })
+    </script>
+  </body>
+</html>
